@@ -1,0 +1,73 @@
+$default-border-radius: 5px;
+$input-color: #bfbfbf;
+$error-color: #d03737;
+
+.login_status {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.wrapper{
+    text-align: right;
+    max-width: 200px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .field_wrap {
+        position: relative;
+        width: 100%;
+
+        input {
+            text-align: right;
+            height: 30px;
+            border-radius: $default-border-radius;
+            border: 1px solid $input-color;
+            outline: none;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+    
+            &::placeholder {
+                color: $input-color;
+            }
+
+            &:disabled{
+                border: none;
+            }
+        }
+    
+        .error{
+            border: 1px solid $error-color;
+        }
+    
+        .error_message {
+            color: $error-color;
+            font-size: 12px;
+            height: 16px;
+        }
+    }
+
+    .button_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button, .back_btn {
+        margin-top: 10px;
+        padding: 7px;
+        width: 100px;
+        border-radius: $default-border-radius;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .back_btn {
+        background-color: #fff;
+        border: solid 2px #333;
+        width: auto;
+        text-decoration: none;
+    }
+}
